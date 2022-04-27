@@ -12,7 +12,7 @@ export default function ActiveMovieModal({ activeMovie, close }: Props) {
 
   return (
     <div className='flex items-center justify-center fixed top-0 left-0 w-[100vw] h-[100vh] z-50'>
-      <div className='relative flex flex-col gap-4 items-center justify-center z-30 bg-white p-8 mx-12 rounded-xl max-w-xl'>
+      <div className='relative flex flex-col gap-4 items-center z-30 bg-white p-8 mx-12 rounded-xl max-w-xl max-h-[90%] overflow-scroll'>
         <h1 className='text-xl'>{title}</h1>
         <img
           src={`${process.env.REACT_APP_BASE_IMG_PATH}${poster_path}`}
