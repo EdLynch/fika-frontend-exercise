@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieRow from './MovieRow';
+import MovieRow from './MovieItem';
 import { Movie } from '../types';
 
 type Props = {
@@ -14,7 +14,14 @@ export default function MovieList({
   setActiveMovie,
 }: Props) {
   const Message = () =>
-    isLoading ? <div>Loading...</div> : <div>No movies found</div>;
+    isLoading ? (
+      <div className='flex items-center justify-center w-16 h-16 mt-10 relative'>
+        <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75'></span>
+        <span className='relative inline-flex rounded-full h-16 w-16 bg-sky-500'></span>
+      </div>
+    ) : (
+      <div className='text-4xl mt-8 text-slate-500'>No movies found</div>
+    );
 
   return (
     <div className='w-full flex flex-col items-center min-h-[600px] my-4'>

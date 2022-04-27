@@ -9,7 +9,6 @@ type Props = {
 
 export default function Genres({ genres, setGenres }: Props) {
   const { data } = useQuery('genres', getGenres);
-  console.log(data);
   if (!data) return null;
 
   const toggle = (id: number) => {

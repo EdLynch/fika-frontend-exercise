@@ -22,7 +22,7 @@ const Tab = ({
     onClick={() => setActiveTab(tab)}
     className={classNames(
       'border-b-4',
-      activeTab === tab ? 'border-green-600' : 'border-slate-600'
+      activeTab === tab ? 'border-sky-500' : 'border-slate-600'
     )}
   >
     {tab}

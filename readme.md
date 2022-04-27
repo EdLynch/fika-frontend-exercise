@@ -24,6 +24,8 @@ The API will provide part of the image url via the `poster_path` field of each f
 
 # Setup
 
+### `cp .env.example .env`
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -53,9 +55,12 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 # Future developments
-
+- Add routing so users can get back to page/expanded modal via URL
+- Better error handling
 - Add more tests
 - Add more filters
 - Add sort by
 - Look at adding page size select
 - Cleaner UI
+- Faviocon + Logo
+- SEO

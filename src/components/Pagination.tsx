@@ -14,7 +14,7 @@ const Item = ({
 }: Pick<Props, 'page' | 'setPage'> & { active?: boolean }) => (
   <button
     className={classNames('text-xl w-12 text-center', {
-      'bg-green-500': active,
+      'bg-sky-500 rounded-full text-white': active,
     })}
     onClick={() => setPage(page)}
   >
@@ -24,7 +24,7 @@ const Item = ({
 
 export default function Pagination({ page, totalPages, setPage }: Props) {
   return (
-    <div className='flex justify-between gap-4 w-96 mb-4'>
+    <div className='flex justify-between gap-4 w-96 mb-4 mx-4 max-w-[95%]'>
       <button onClick={() => setPage(page - 1)} disabled={page === 1}>
         {'<'}
       </button>
